@@ -7,12 +7,78 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="0ceac7e5-d781-41ae-ab77-beaa0ef223b6" name="Changes" comment="">
+    <list default="true" id="0ceac7e5-d781-41ae-ab77-beaa0ef223b6" name="Changes" comment="BROKEN BUILD&#10;&#10;Added Behaviour.h">
+      <change afterPath="$PROJECT_DIR$/.idea/.idea.GameEngine/.idea/shelf/Uncommitted_changes_before_Update_at_23_08_2022_14_58_[Changes]/shelved.patch" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/.idea.GameEngine/.idea/shelf/Uncommitted_changes_before_Update_at_23_08_2022_14_58__Changes_.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Core/Object/Behaviour.cpp" afterDir="false" />
       <change afterPath="$PROJECT_DIR$/Core/Object/Behaviour.h" afterDir="false" />
       <change afterPath="$PROJECT_DIR$/Core/Object/Object.cpp" afterDir="false" />
       <change afterPath="$PROJECT_DIR$/Core/Object/Object.h" afterDir="false" />
       <change afterPath="$PROJECT_DIR$/Core/Util/VectContainer.hpp" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Core/x64/Debug/Core.tlog/unsuccessfulbuild" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Core/x64/Release/Core.lib.recipe" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Core/x64/Release/Core.tlog/CL.command.1.tlog" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Core/x64/Release/Core.tlog/CL.read.1.tlog" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Core/x64/Release/Core.tlog/CL.write.1.tlog" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Core/x64/Release/Core.tlog/Core.lastbuildstate" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Core/x64/Release/Core.tlog/Lib-link.read.1.tlog" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Core/x64/Release/Core.tlog/Lib-link.write.1.tlog" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Core/x64/Release/Core.tlog/Lib.command.1.tlog" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Core/x64/Release/ObjectsHandler.obj" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Core/x64/Release/Renderer.obj" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Core/x64/Release/Shader.obj" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Core/x64/Release/vcpkg.applocal.log" afterDir="false" />
       <change afterPath="$PROJECT_DIR$/Test Game/Test.h" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Test Game/objects.bin" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Test Game/x64/Release/Test Game.exe.recipe" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Test Game/x64/Release/Test Game.iobj" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Test Game/x64/Release/Test Game.ipdb" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Test Game/x64/Release/Test Game.obj" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Test Game/x64/Release/Test Game.tlog/CL.command.1.tlog" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Test Game/x64/Release/Test Game.tlog/CL.read.1.tlog" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Test Game/x64/Release/Test Game.tlog/CL.write.1.tlog" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Test Game/x64/Release/Test Game.tlog/Test Game.lastbuildstate" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Test Game/x64/Release/Test Game.tlog/Test Game.write.1u.tlog" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Test Game/x64/Release/Test Game.tlog/link.command.1.tlog" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Test Game/x64/Release/Test Game.tlog/link.read.1.tlog" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Test Game/x64/Release/Test Game.tlog/link.write.1.tlog" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Test Game/x64/Release/Test Game.vcxproj.FileListAbsolute.txt" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Test Game/x64/Release/vc143.pdb" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Test Game/x64/Release/vcpkg.applocal.log" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/x64/Debug/Assets/Box/box.mtl" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/x64/Debug/Assets/Box/box.obj" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/x64/Debug/Assets/Box/diffuse.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/x64/Debug/Assets/Cube/cube.mtl" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/x64/Debug/Assets/Cube/cube.obj" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/x64/Debug/Assets/Cube/diffuse.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/x64/Debug/Assets/Test.fbx" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/x64/Debug/Shader/shader.frag" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/x64/Debug/Shader/shader.vert" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/x64/Debug/imgui.ini" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/x64/Debug/objects.bin" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/x64/Release.zip" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/x64/Release/Assets/Box/box.mtl" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/x64/Release/Assets/Box/box.obj" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/x64/Release/Assets/Box/diffuse.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/x64/Release/Assets/Cube/cube.mtl" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/x64/Release/Assets/Cube/cube.obj" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/x64/Release/Assets/Cube/diffuse.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/x64/Release/Assets/Test.fbx" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/x64/Release/Core.lib" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/x64/Release/Core.pdb" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/x64/Release/Shader/shader.frag" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/x64/Release/Shader/shader.vert" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/x64/Release/Test Game.exe" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/x64/Release/Test Game.exp" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/x64/Release/Test Game.lib" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/x64/Release/Test Game.pdb" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/x64/Release/assimp-vc143-mt.dll" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/x64/Release/boost_serialization-vc143-mt-x64-1_79.dll" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/x64/Release/glfw3.dll" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/x64/Release/imgui.ini" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/x64/Release/objects.bin" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/x64/Release/pugixml.dll" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/x64/Release/zlib1.dll" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/.idea.GameEngine/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/.idea.GameEngine/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Core/Core.vcxproj" beforeDir="false" afterPath="$PROJECT_DIR$/Core/Core.vcxproj" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Core/Engine.h" beforeDir="false" afterPath="$PROJECT_DIR$/Core/Engine.h" afterDir="false" />
@@ -152,7 +218,7 @@
       <workItem from="1661187861454" duration="440000" />
       <workItem from="1661188316012" duration="4144000" />
       <workItem from="1661237825702" duration="12958000" />
-      <workItem from="1661275359037" duration="1321000" />
+      <workItem from="1661275359037" duration="1656000" />
     </task>
     <task id="LOCAL-00001" summary="Added things">
       <created>1661247333378</created>
@@ -175,7 +241,14 @@
       <option name="project" value="LOCAL" />
       <updated>1661254559268</updated>
     </task>
-    <option name="localTasksCounter" value="4" />
+    <task id="LOCAL-00004" summary="BROKEN BUILD&#10;&#10;Added Behaviour.h">
+      <created>1661277744430</created>
+      <option name="number" value="00004" />
+      <option name="presentableId" value="LOCAL-00004" />
+      <option name="project" value="LOCAL" />
+      <updated>1661277744430</updated>
+    </task>
+    <option name="localTasksCounter" value="5" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -199,6 +272,7 @@
     <MESSAGE value="Added things" />
     <MESSAGE value="something" />
     <MESSAGE value="Commit" />
-    <option name="LAST_COMMIT_MESSAGE" value="Commit" />
+    <MESSAGE value="BROKEN BUILD&#10;&#10;Added Behaviour.h" />
+    <option name="LAST_COMMIT_MESSAGE" value="BROKEN BUILD&#10;&#10;Added Behaviour.h" />
   </component>
 </project>
