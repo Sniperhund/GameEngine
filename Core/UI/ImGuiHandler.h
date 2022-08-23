@@ -24,6 +24,11 @@ namespace GameEngine_Core
         inline static bool m_showImGuiExamples = false;
 
         inline static std::vector<Object> m_objects;
+
+        inline static char m_modelPath[128] = "";
+        inline static char m_shaderPath[128] = "";
+        inline static char m_name[128] = "";
+        inline static float m_pos[3] = {0, 0, 0};
     public:
         static void Init()
         {
@@ -49,6 +54,15 @@ namespace GameEngine_Core
             ImGui::NewFrame();
 
             if (m_showNewObjectMenu) ShowNewObject(&m_showNewObjectMenu);
+            else
+            {
+                strcpy_s(m_modelPath, "");
+                strcpy_s(m_shaderPath, "");
+                strcpy_s(m_name, "");
+                m_pos[0] = 0;
+                m_pos[1] = 0;
+                m_pos[2] = 0;
+            }
             if (m_showHierarchyMenu) ShowHierarchy(&m_showHierarchyMenu);
             if (m_showMetricsMenu) ShowMetrics(&m_showMetricsMenu);
             if (m_showEngineMenu) ShowEngine(&m_showEngineMenu);
@@ -108,27 +122,30 @@ namespace GameEngine_Core
                 return;
             }
             
-            std::string modelPath{""};
-            ImGui::InputText("Model Path", &modelPath);
+            ImGui::InputText("Model path", m_modelPath, IM_ARRAYSIZE(m_modelPath));
 
-            std::string shaderPath{""};
-            ImGui::InputText("Shader Path", &shaderPath);
-
-            std::string name{""};
-            ImGui::InputText("Name", &name);
-
-            float pos[3] = {0.f, 0.f, 0.f};
-            ImGui::InputFloat3("Position", pos);
+            ImGui::InputText("Shader path", m_shaderPath, IM_ARRAYSIZE(m_shaderPath));
+            
+            ImGui::InputText("Name", m_name, IM_ARRAYSIZE(m_name));
+            
+            ImGui::InputFloat3("Position", m_pos);
 
             ImGui::Spacing();
             if (ImGui::Button("Submit"))
             {
                 Renderer::m_drawObjects = false;
-                m_objects[working_object].Init("Assets/Box/box.obj", "Shader/shader", "name", 0, 0, 0);
+                m_objects[working_object].Init(std::format("Assets/{}", m_modelPath),
+                    std::format("Shader/{}", m_shaderPath), m_name, m_pos[0], m_pos[1], m_pos[2]);
                 ObjectsHandler::AddObject(m_objects[working_object]);
                 m_showNewObjectMenu = false;
                 Renderer::m_drawObjects = true;
                 working_object++;
+                strcpy_s(m_modelPath, "");
+                strcpy_s(m_shaderPath, "");
+                strcpy_s(m_name, "");
+                m_pos[0] = 0;
+                m_pos[1] = 0;
+                m_pos[2] = 0;
             }
         
             ImGui::End();
@@ -155,33 +172,33 @@ namespace GameEngine_Core
         
             for (auto object : ObjectsHandler::GetObjects())
             {
-                if(ImGui::TreeNode(object.get().GetName().c_str()))
+                if(ImGui::TreeNode(object.GetName().c_str()))
                 {
                     ImGui::Text("General Settings");
-                    std::string name = object.get().GetName();
+                    std::string name = object.GetName();
                     if (ImGui::InputText("Name", &name, ImGuiInputTextFlags_EnterReturnsTrue))
-                        object.get().SetName(name);
+                        object.SetName(name);
                 
                     ImGui::Text("Transform");
-                    glm::vec3 _pos = object.get().GetPosition();
+                    glm::vec3 _pos = object.GetPosition();
                     float pos[3] = {_pos.x, _pos.y, _pos.z};
                     ImGui::InputFloat3("Position", pos);
-                    object.get().SetPosition(pos[0], pos[1], pos[2]);
+                    object.SetPosition(pos[0], pos[1], pos[2]);
 
-                    glm::vec3 _scale = object.get().GetScale();
+                    glm::vec3 _scale = object.GetScale();
                     float scale[3] = {_scale.x, _scale.y, _scale.z};
                     ImGui::InputFloat3("Scale", scale);
-                    object.get().SetScale(scale[0], scale[1], scale[2]);
+                    object.SetScale(scale[0], scale[1], scale[2]);
 
-                    glm::vec3 _rotation = object.get().GetRotation();
+                    glm::vec3 _rotation = object.GetRotation();
                     float rotation[3] = {_rotation.x, _rotation.y, _rotation.z};
                     ImGui::InputFloat3("Rotation", rotation);
-                    object.get().SetRotation(rotation[0], rotation[1], rotation[2]);
+                    object.SetRotation(rotation[0], rotation[1], rotation[2]);
 
                     ImGui::Text("Rendering");
-                    bool active = object.get().GetActive();
+                    bool active = object.GetActive();
                     ImGui::Checkbox("Active", &active);
-                    object.get().SetActive(active);
+                    object.SetActive(active);
                 
                     ImGui::TreePop();
                 }

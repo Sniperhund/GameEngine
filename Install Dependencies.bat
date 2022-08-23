@@ -32,3 +32,4 @@ vcpkg install glm
 vcpkg install glad
 vcpkg install assimp
 vcpkg install imgui[docking-experimental,opengl3-binding,core,glfw-binding] --recurse
+vcpkg install boost-serialization

@@ -1,5 +1,6 @@
 ﻿#pragma once
-#include <vector>
+#include <boost/serialization/serialization.hpp>
+#include <boost/serialization/vector.hpp>
 
 #include "Object.h"
 
@@ -7,9 +8,9 @@ namespace GameEngine_Core
 {
     class ObjectsHandler
     {
-        static std::vector<std::reference_wrapper<Object>> m_objects;
+        static vector<Object> m_objects;
     public:
-        static std::vector<std::reference_wrapper<Object>> GetObjects();
-        static void AddObject(std::reference_wrapper<Object> obj);
+        static std::vector<Object> GetObjects();
+        static void AddObject(Object obj);
     };
 }

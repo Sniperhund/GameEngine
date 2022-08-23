@@ -139,8 +139,8 @@ void GameEngine_Core::Renderer::StartGameLoop()
         {
             for (auto object : ObjectsHandler::GetObjects())
             {
-                if (object.get().GetActive())
-                    object.get().Draw();
+                if (object.GetActive())
+                    object.Draw();
             }
         }
 

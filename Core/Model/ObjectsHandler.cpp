@@ -1,6 +1,10 @@
 ﻿#include "ObjectsHandler.h"
 
-std::vector<std::reference_wrapper<GameEngine_Core::Object>> GameEngine_Core::ObjectsHandler::m_objects;
+#include <boost/serialization/serialization.hpp>
+#include <boost/archive/text_iarchive.hpp>
+#include <boost/archive/text_oarchive.hpp>
 
-std::vector<std::reference_wrapper<GameEngine_Core::Object>> GameEngine_Core::ObjectsHandler::GetObjects() { return m_objects; }
-void GameEngine_Core::ObjectsHandler::AddObject(std::reference_wrapper<Object> obj) { m_objects.emplace_back(obj); }
+std::vector<GameEngine_Core::Object> GameEngine_Core::ObjectsHandler::m_objects;
+
+std::vector<GameEngine_Core::Object> GameEngine_Core::ObjectsHandler::GetObjects() { return m_objects; }
+void GameEngine_Core::ObjectsHandler::AddObject(Object obj) { m_objects.emplace_back(obj); }
