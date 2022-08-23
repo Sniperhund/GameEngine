@@ -14,6 +14,13 @@ namespace GameEngine_Core
 {
 #define MAX_BONE_INFLUENCE 4
 
+    struct Material {
+        glm::vec3 Diffuse;
+        glm::vec3 Specular;
+        glm::vec3 Ambient;
+        float Shininess;
+    };
+    
     struct Vertex {
         // position
         glm::vec3 Position;
@@ -57,8 +64,10 @@ namespace GameEngine_Core
         }
 
         // render the mesh
-        void Draw(Shader &shader) 
+        void Draw(Shader &shader, Material mat) 
         {
+            bool useDiffuse = false;
+            
             // bind appropriate textures
             unsigned int diffuseNr  = 1;
             unsigned int specularNr = 1;
@@ -71,7 +80,10 @@ namespace GameEngine_Core
                 string number;
                 string name = textures[i].type;
                 if(name == "texture_diffuse")
+                {
                     number = std::to_string(diffuseNr++);
+                    useDiffuse = true;
+                }
                 else if(name == "texture_specular")
                     number = std::to_string(specularNr++); // transfer unsigned int to string
                 else if(name == "texture_normal")
@@ -85,8 +97,18 @@ namespace GameEngine_Core
                 glBindTexture(GL_TEXTURE_2D, textures[i].id);
             }
 
+            if (textures.size() <= 1)
+            {
+                if (useDiffuse)
+                    shader.SetBool("is_texture_used", true);
+                else
+                    shader.SetBool("is_texture_used", false);
+            } else shader.SetBool("is_texture_used", false);
+            
             Renderer::AmountOfTriangles += indices.size() / 3;
-        
+
+            shader.SetVec3("diffuse", mat.Diffuse);
+            
             // draw mesh
             glBindVertexArray(VAO);
             glDrawElements(GL_TRIANGLES, static_cast<unsigned int>(indices.size()), GL_UNSIGNED_INT, 0);

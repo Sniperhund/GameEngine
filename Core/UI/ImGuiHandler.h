@@ -172,33 +172,38 @@ namespace GameEngine_Core
         
             for (auto object : ObjectsHandler::GetObjects())
             {
-                if(ImGui::TreeNode(object.GetName().c_str()))
+                if(ImGui::TreeNode(object.get().GetName().c_str()))
                 {
                     ImGui::Text("General Settings");
-                    std::string name = object.GetName();
+                    std::string name = object.get().GetName();
                     if (ImGui::InputText("Name", &name, ImGuiInputTextFlags_EnterReturnsTrue))
-                        object.SetName(name);
+                        object.get().SetName(name);
                 
                     ImGui::Text("Transform");
-                    glm::vec3 _pos = object.GetPosition();
+                    glm::vec3 _pos = object.get().GetPosition();
                     float pos[3] = {_pos.x, _pos.y, _pos.z};
                     ImGui::InputFloat3("Position", pos);
-                    object.SetPosition(pos[0], pos[1], pos[2]);
+                    object.get().SetPosition(pos[0], pos[1], pos[2]);
 
-                    glm::vec3 _scale = object.GetScale();
+                    glm::vec3 _scale = object.get().GetScale();
                     float scale[3] = {_scale.x, _scale.y, _scale.z};
                     ImGui::InputFloat3("Scale", scale);
-                    object.SetScale(scale[0], scale[1], scale[2]);
+                    object.get().SetScale(scale[0], scale[1], scale[2]);
 
-                    glm::vec3 _rotation = object.GetRotation();
+                    glm::vec3 _rotation = object.get().GetRotation();
                     float rotation[3] = {_rotation.x, _rotation.y, _rotation.z};
                     ImGui::InputFloat3("Rotation", rotation);
-                    object.SetRotation(rotation[0], rotation[1], rotation[2]);
+                    object.get().SetRotation(rotation[0], rotation[1], rotation[2]);
 
                     ImGui::Text("Rendering");
-                    bool active = object.GetActive();
+                    bool active = object.get().GetActive();
                     ImGui::Checkbox("Active", &active);
-                    object.SetActive(active);
+                    object.get().SetActive(active);
+
+                    glm::vec4 _col = object.get().GetColor();
+                    float col[4] = {_col.x, _col.y, _col.z, _col.w};
+                    ImGui::ColorPicker4("Color", col, ImGuiColorEditFlags_AlphaBar | ImGuiColorEditFlags_NoInputs);
+                    object.get().SetColor(glm::vec4(col[0], col[1], col[2], col[3]));
                 
                     ImGui::TreePop();
                 }

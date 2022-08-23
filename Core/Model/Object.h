@@ -17,6 +17,8 @@ namespace GameEngine_Core
         glm::vec3 m_scale = glm::vec3(1);
         glm::vec3 m_rotation = glm::vec3(0);
 
+        glm::vec4 m_color = glm::vec4(0);
+
         Model m_model;
         Shader m_shader;
     
@@ -35,6 +37,7 @@ namespace GameEngine_Core
         glm::vec3 GetPosition() const { return m_position; }
         glm::vec3 GetScale() const { return m_scale; }
         glm::vec3 GetRotation() const { return m_rotation; }
+        glm::vec4 GetColor() const { return m_color; }
         bool GetActive() const { return m_active; }
         std::string GetName() { return m_name; }
 
@@ -46,6 +49,7 @@ namespace GameEngine_Core
         void SetRotation(float x, float y, float z) { m_rotation = glm::vec3(x, y, z); }
         void SetActive(bool state) { m_active = state; }
         void SetName(std::string name) { m_name = name; }
+        void SetColor(glm::vec4 color) { m_color = color; }
 
         void Init(std::string modelPath, std::string shaderPath, std::string name, glm::vec3 pos)
         {
@@ -69,6 +73,7 @@ namespace GameEngine_Core
 
             m_shader.Use();
             m_shader.SetMat4("model", model);
+            m_shader.SetVec4("custom_color", m_color);
             m_model.Draw(m_shader);
         }
     };

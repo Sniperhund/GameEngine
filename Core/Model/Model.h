@@ -26,6 +26,26 @@ namespace GameEngine_Core
     class Model 
     {
     private:
+        Material loadMaterial(aiMaterial* mat) {
+            Material material;
+            aiColor3D color(0.f, 0.f, 0.f);
+            float shininess;
+
+            mat->Get(AI_MATKEY_COLOR_DIFFUSE, color);
+            material.Diffuse = glm::vec3(color.r, color.b, color.g);
+
+            mat->Get(AI_MATKEY_COLOR_AMBIENT, color);
+            material.Ambient = glm::vec3(color.r, color.b, color.g);
+
+            mat->Get(AI_MATKEY_COLOR_SPECULAR, color);
+            material.Specular = glm::vec3(color.r, color.b, color.g);
+
+            mat->Get(AI_MATKEY_SHININESS, shininess);
+            material.Shininess = shininess;
+
+            return material;
+        }
+        
         unsigned int TextureFromFile(const char *path, const string &directory, bool gamma = false)
         {
             string filename = string(path);
@@ -71,6 +91,7 @@ namespace GameEngine_Core
         vector<Mesh>    meshes;
         string directory;
         bool gammaCorrection;
+        Material mat;
 
         void Init(string const &path, bool gamma = false)
         {
@@ -82,7 +103,7 @@ namespace GameEngine_Core
         void Draw(Shader &shader)
         {
             for(unsigned int i = 0; i < meshes.size(); i++)
-                meshes[i].Draw(shader);
+                meshes[i].Draw(shader, mat);
         }
     
     private:
@@ -183,7 +204,9 @@ namespace GameEngine_Core
                     indices.push_back(face.mIndices[j]);        
             }
             // process materials
-            aiMaterial* material = scene->mMaterials[mesh->mMaterialIndex];    
+            aiMaterial* material = scene->mMaterials[mesh->mMaterialIndex];
+
+            mat = loadMaterial(material);
 
             // 1. diffuse maps
             vector<Texture> diffuseMaps = loadMaterialTextures(material, aiTextureType_DIFFUSE, "texture_diffuse");

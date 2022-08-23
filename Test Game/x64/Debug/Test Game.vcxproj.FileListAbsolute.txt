@@ -1,2 +1,1 @@
 C:\Users\Lucas\RiderProjects\GameEngine\Test Game\x64\Debug\Test Game.vcxproj.CopyComplete
-C:\Users\snipe\RiderProjects\GameEngine\Test Game\x64\Debug\Test Game.vcxproj.CopyComplete
