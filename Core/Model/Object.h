@@ -50,6 +50,7 @@ namespace GameEngine_Core
         void SetActive(bool state) { m_active = state; }
         void SetName(std::string name) { m_name = name; }
         void SetColor(glm::vec4 color) { m_color = color; }
+        void SetColorRGB(float r, float g, float b, float a) { m_color = glm::vec4(r/255, g/255, b/255, a/255) }
 
         void Init(std::string modelPath, std::string shaderPath, std::string name, glm::vec3 pos)
         {

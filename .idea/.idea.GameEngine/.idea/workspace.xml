@@ -7,37 +7,7 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="0ceac7e5-d781-41ae-ab77-beaa0ef223b6" name="Changes" comment="something">
-      <change beforePath="$PROJECT_DIR$/.idea/.idea.GameEngine/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/.idea.GameEngine/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Core/Model/Mesh.h" beforeDir="false" afterPath="$PROJECT_DIR$/Core/Model/Mesh.h" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Core/Model/Model.h" beforeDir="false" afterPath="$PROJECT_DIR$/Core/Model/Model.h" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Core/Model/Object.h" beforeDir="false" afterPath="$PROJECT_DIR$/Core/Model/Object.h" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Core/Model/ObjectsHandler.cpp" beforeDir="false" afterPath="$PROJECT_DIR$/Core/Model/ObjectsHandler.cpp" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Core/Model/ObjectsHandler.h" beforeDir="false" afterPath="$PROJECT_DIR$/Core/Model/ObjectsHandler.h" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Core/Renderer/Renderer.cpp" beforeDir="false" afterPath="$PROJECT_DIR$/Core/Renderer/Renderer.cpp" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Core/UI/ImGuiHandler.h" beforeDir="false" afterPath="$PROJECT_DIR$/Core/UI/ImGuiHandler.h" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Core/x64/Debug/Core.tlog/CL.read.1.tlog" beforeDir="false" afterPath="$PROJECT_DIR$/Core/x64/Debug/Core.tlog/CL.read.1.tlog" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Core/x64/Debug/Core.tlog/CL.write.1.tlog" beforeDir="false" afterPath="$PROJECT_DIR$/Core/x64/Debug/Core.tlog/CL.write.1.tlog" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Core/x64/Debug/ObjectsHandler.obj" beforeDir="false" afterPath="$PROJECT_DIR$/Core/x64/Debug/ObjectsHandler.obj" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Core/x64/Debug/Renderer.obj" beforeDir="false" afterPath="$PROJECT_DIR$/Core/x64/Debug/Renderer.obj" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Test Game/Assets/Test.fbx" beforeDir="false" afterPath="$PROJECT_DIR$/Test Game/Assets/Test.fbx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Test Game/Shader/shader.frag" beforeDir="false" afterPath="$PROJECT_DIR$/Test Game/Shader/shader.frag" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Test Game/imgui.ini" beforeDir="false" afterPath="$PROJECT_DIR$/Test Game/imgui.ini" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Test Game/x64/Debug/Test Game.ilk" beforeDir="false" afterPath="$PROJECT_DIR$/Test Game/x64/Debug/Test Game.ilk" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Test Game/x64/Debug/Test Game.obj" beforeDir="false" afterPath="$PROJECT_DIR$/Test Game/x64/Debug/Test Game.obj" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Test Game/x64/Debug/Test Game.tlog/CL.read.1.tlog" beforeDir="false" afterPath="$PROJECT_DIR$/Test Game/x64/Debug/Test Game.tlog/CL.read.1.tlog" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Test Game/x64/Debug/Test Game.tlog/Test Game.write.1u.tlog" beforeDir="false" afterPath="$PROJECT_DIR$/Test Game/x64/Debug/Test Game.tlog/Test Game.write.1u.tlog" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Test Game/x64/Debug/Test Game.tlog/link.read.1.tlog" beforeDir="false" afterPath="$PROJECT_DIR$/Test Game/x64/Debug/Test Game.tlog/link.read.1.tlog" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Test Game/x64/Debug/Test Game.vcxproj.FileListAbsolute.txt" beforeDir="false" afterPath="$PROJECT_DIR$/Test Game/x64/Debug/Test Game.vcxproj.FileListAbsolute.txt" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Test Game/x64/Debug/vc143.idb" beforeDir="false" afterPath="$PROJECT_DIR$/Test Game/x64/Debug/vc143.idb" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Test Game/x64/Debug/vc143.pdb" beforeDir="false" afterPath="$PROJECT_DIR$/Test Game/x64/Debug/vc143.pdb" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Test Game/x64/Debug/vcpkg.applocal.log" beforeDir="false" afterPath="$PROJECT_DIR$/Test Game/x64/Debug/vcpkg.applocal.log" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/x64/Debug/Core.idb" beforeDir="false" afterPath="$PROJECT_DIR$/x64/Debug/Core.idb" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/x64/Debug/Core.lib" beforeDir="false" afterPath="$PROJECT_DIR$/x64/Debug/Core.lib" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/x64/Debug/Core.pdb" beforeDir="false" afterPath="$PROJECT_DIR$/x64/Debug/Core.pdb" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/x64/Debug/Test Game.exe" beforeDir="false" afterPath="$PROJECT_DIR$/x64/Debug/Test Game.exe" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/x64/Debug/Test Game.pdb" beforeDir="false" afterPath="$PROJECT_DIR$/x64/Debug/Test Game.pdb" afterDir="false" />
-    </list>
+    <list default="true" id="0ceac7e5-d781-41ae-ab77-beaa0ef223b6" name="Changes" comment="Commit" />
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
@@ -130,7 +100,7 @@
       <workItem from="1661187694523" duration="152000" />
       <workItem from="1661187861454" duration="440000" />
       <workItem from="1661188316012" duration="4144000" />
-      <workItem from="1661237825702" duration="12582000" />
+      <workItem from="1661237825702" duration="12958000" />
     </task>
     <task id="LOCAL-00001" summary="Added things">
       <created>1661247333378</created>
@@ -146,7 +116,14 @@
       <option name="project" value="LOCAL" />
       <updated>1661247858463</updated>
     </task>
-    <option name="localTasksCounter" value="3" />
+    <task id="LOCAL-00003" summary="Commit">
+      <created>1661254559268</created>
+      <option name="number" value="00003" />
+      <option name="presentableId" value="LOCAL-00003" />
+      <option name="project" value="LOCAL" />
+      <updated>1661254559268</updated>
+    </task>
+    <option name="localTasksCounter" value="4" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -169,6 +146,7 @@
     <option name="CLEAR_INITIAL_COMMIT_MESSAGE" value="true" />
     <MESSAGE value="Added things" />
     <MESSAGE value="something" />
-    <option name="LAST_COMMIT_MESSAGE" value="something" />
+    <MESSAGE value="Commit" />
+    <option name="LAST_COMMIT_MESSAGE" value="Commit" />
   </component>
 </project>
