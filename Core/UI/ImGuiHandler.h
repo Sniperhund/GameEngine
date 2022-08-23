@@ -163,13 +163,16 @@ namespace GameEngine_Core
                 if (ImGui::BeginMenu("Menu"))
                 {
                     ImGui::MenuItem("New Object", nullptr, &m_showNewObjectMenu);
+                    ImGui::Separator();
+                    if (ImGui::MenuItem("Save Objects")) ObjectsHandler::Save();
+                    if (ImGui::MenuItem("Load Objects")) ObjectsHandler::Load();
                     ImGui::EndMenu();
                 }
                 ImGui::EndMenuBar();
             }
         
             ImGui::Spacing();
-        
+            
             for (auto object : ObjectsHandler::GetObjects())
             {
                 if(ImGui::TreeNode(object.get().GetName().c_str()))
@@ -202,6 +205,8 @@ namespace GameEngine_Core
 
                     glm::vec4 _col = object.get().GetColor();
                     float col[4] = {_col.x, _col.y, _col.z, _col.w};
+                    float w = (ImGui::GetContentRegionAvail().x - ImGui::GetStyle().ItemSpacing.y) * 0.50f;
+                    ImGui::SetNextItemWidth(w);
                     ImGui::ColorPicker4("Color", col, ImGuiColorEditFlags_AlphaBar | ImGuiColorEditFlags_NoInputs);
                     object.get().SetColor(glm::vec4(col[0], col[1], col[2], col[3]));
                 
