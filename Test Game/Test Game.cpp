@@ -12,6 +12,8 @@ void GameLoop()
 
 int main(int argc, char* argv[])
 {
+    DebugLog("This is stupid");
+    
     Renderer::CreateWindow(1280, 720, "Game Engine");
     
     Renderer::AddGameLoopCallback(GameLoop);
