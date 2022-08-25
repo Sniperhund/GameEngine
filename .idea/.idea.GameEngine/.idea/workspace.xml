@@ -8,45 +8,42 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="0ceac7e5-d781-41ae-ab77-beaa0ef223b6" name="Changes" comment="">
-      <change afterPath="$PROJECT_DIR$/Core/x64/Debug/Object.obj" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/.idea.GameEngine/.idea/shelf/Uncommitted_changes_before_Checkout_at_23_08_2022_20_16__Changes_.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/.idea.GameEngine/.idea/shelf/Uncommitted_changes_before_Checkout_at_23_08_2022_20_16__Changes_.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/.idea.GameEngine/.idea/shelf/Uncommitted_changes_before_Update_at_23_08_2022_14_58__Changes_.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/.idea.GameEngine/.idea/shelf/Uncommitted_changes_before_Update_at_23_08_2022_14_58__Changes_.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/.idea.GameEngine/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/.idea.GameEngine/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Core/Core.vcxproj" beforeDir="false" afterPath="$PROJECT_DIR$/Core/Core.vcxproj" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Core/Engine.h" beforeDir="false" afterPath="$PROJECT_DIR$/Core/Engine.h" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Core/Object/Behaviour.cpp" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Core/Object/Behaviour.h" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Core/Object/Object.cpp" beforeDir="false" afterPath="$PROJECT_DIR$/Core/Object/Object.cpp" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Core/Object/Object.h" beforeDir="false" afterPath="$PROJECT_DIR$/Core/Object/Object.h" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Core/Renderer/Renderer.cpp" beforeDir="false" afterPath="$PROJECT_DIR$/Core/Renderer/Renderer.cpp" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Core/UI/ImGuiHandler.h" beforeDir="false" afterPath="$PROJECT_DIR$/Core/UI/ImGuiHandler.h" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Core/x64/Debug/Core.tlog/CL.command.1.tlog" beforeDir="false" afterPath="$PROJECT_DIR$/Core/x64/Debug/Core.tlog/CL.command.1.tlog" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Core/x64/Debug/Core.tlog/CL.read.1.tlog" beforeDir="false" afterPath="$PROJECT_DIR$/Core/x64/Debug/Core.tlog/CL.read.1.tlog" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Core/x64/Debug/Core.tlog/CL.write.1.tlog" beforeDir="false" afterPath="$PROJECT_DIR$/Core/x64/Debug/Core.tlog/CL.write.1.tlog" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Core/x64/Debug/Core.tlog/Core.lastbuildstate" beforeDir="false" afterPath="$PROJECT_DIR$/Core/x64/Debug/Core.tlog/Core.lastbuildstate" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Core/x64/Debug/Core.tlog/Lib-link.read.1.tlog" beforeDir="false" afterPath="$PROJECT_DIR$/Core/x64/Debug/Core.tlog/Lib-link.read.1.tlog" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Core/x64/Debug/Core.tlog/Lib-link.write.1.tlog" beforeDir="false" afterPath="$PROJECT_DIR$/Core/x64/Debug/Core.tlog/Lib-link.write.1.tlog" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Core/x64/Debug/Core.tlog/Lib.command.1.tlog" beforeDir="false" afterPath="$PROJECT_DIR$/Core/x64/Debug/Core.tlog/Lib.command.1.tlog" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Core/x64/Debug/Core.tlog/unsuccessfulbuild" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Core/x64/Debug/Object.obj" beforeDir="false" afterPath="$PROJECT_DIR$/Core/x64/Debug/Object.obj" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Core/x64/Debug/ObjectsHandler.obj" beforeDir="false" afterPath="$PROJECT_DIR$/Core/x64/Debug/ObjectsHandler.obj" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Core/x64/Debug/Renderer.obj" beforeDir="false" afterPath="$PROJECT_DIR$/Core/x64/Debug/Renderer.obj" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Core/x64/Debug/Shader.obj" beforeDir="false" afterPath="$PROJECT_DIR$/Core/x64/Debug/Shader.obj" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Test Game/Shader/shader.frag" beforeDir="false" afterPath="$PROJECT_DIR$/Test Game/Shader/shader.frag" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Test Game/Shader/shader.vert" beforeDir="false" afterPath="$PROJECT_DIR$/Test Game/Shader/shader.vert" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Test Game/Test Game.cpp" beforeDir="false" afterPath="$PROJECT_DIR$/Test Game/Test Game.cpp" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Test Game/Test Game.vcxproj" beforeDir="false" afterPath="$PROJECT_DIR$/Test Game/Test Game.vcxproj" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Test Game/Test.h" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/Test Game/imgui.ini" beforeDir="false" afterPath="$PROJECT_DIR$/Test Game/imgui.ini" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Test Game/objects.bin" beforeDir="false" afterPath="$PROJECT_DIR$/Test Game/objects.bin" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Test Game/x64/Debug/Test Game.exe.recipe" beforeDir="false" afterPath="$PROJECT_DIR$/Test Game/x64/Debug/Test Game.exe.recipe" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Test Game/x64/Debug/Test Game.ilk" beforeDir="false" afterPath="$PROJECT_DIR$/Test Game/x64/Debug/Test Game.ilk" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Test Game/x64/Debug/Test Game.obj" beforeDir="false" afterPath="$PROJECT_DIR$/Test Game/x64/Debug/Test Game.obj" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Test Game/x64/Debug/Test Game.tlog/CL.read.1.tlog" beforeDir="false" afterPath="$PROJECT_DIR$/Test Game/x64/Debug/Test Game.tlog/CL.read.1.tlog" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Test Game/x64/Debug/Test Game.tlog/Test Game.lastbuildstate" beforeDir="false" afterPath="$PROJECT_DIR$/Test Game/x64/Debug/Test Game.tlog/Test Game.lastbuildstate" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Test Game/x64/Debug/Test Game.tlog/Test Game.write.1u.tlog" beforeDir="false" afterPath="$PROJECT_DIR$/Test Game/x64/Debug/Test Game.tlog/Test Game.write.1u.tlog" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Test Game/x64/Debug/Test Game.tlog/link.command.1.tlog" beforeDir="false" afterPath="$PROJECT_DIR$/Test Game/x64/Debug/Test Game.tlog/link.command.1.tlog" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Test Game/x64/Debug/Test Game.tlog/link.read.1.tlog" beforeDir="false" afterPath="$PROJECT_DIR$/Test Game/x64/Debug/Test Game.tlog/link.read.1.tlog" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Test Game/x64/Debug/Test Game.vcxproj.FileListAbsolute.txt" beforeDir="false" afterPath="$PROJECT_DIR$/Test Game/x64/Debug/Test Game.vcxproj.FileListAbsolute.txt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Test Game/x64/Debug/Test Game.tlog/link.write.1.tlog" beforeDir="false" afterPath="$PROJECT_DIR$/Test Game/x64/Debug/Test Game.tlog/link.write.1.tlog" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Test Game/x64/Debug/vc143.idb" beforeDir="false" afterPath="$PROJECT_DIR$/Test Game/x64/Debug/vc143.idb" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Test Game/x64/Debug/vc143.pdb" beforeDir="false" afterPath="$PROJECT_DIR$/Test Game/x64/Debug/vc143.pdb" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Test Game/x64/Debug/vcpkg.applocal.log" beforeDir="false" afterPath="$PROJECT_DIR$/Test Game/x64/Debug/vcpkg.applocal.log" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/x64/Debug/Core.idb" beforeDir="false" afterPath="$PROJECT_DIR$/x64/Debug/Core.idb" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/x64/Debug/Core.lib" beforeDir="false" afterPath="$PROJECT_DIR$/x64/Debug/Core.lib" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/x64/Debug/Core.pdb" beforeDir="false" afterPath="$PROJECT_DIR$/x64/Debug/Core.pdb" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/x64/Debug/Test Game.exe" beforeDir="false" afterPath="$PROJECT_DIR$/x64/Debug/Test Game.exe" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/x64/Debug/Test Game.exp" beforeDir="false" afterPath="$PROJECT_DIR$/x64/Debug/Test Game.exp" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/x64/Debug/Test Game.lib" beforeDir="false" afterPath="$PROJECT_DIR$/x64/Debug/Test Game.lib" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/x64/Debug/Test Game.pdb" beforeDir="false" afterPath="$PROJECT_DIR$/x64/Debug/Test Game.pdb" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
@@ -70,8 +67,6 @@
     </option>
   </component>
   <component name="HighlightingSettingsPerFile">
-    <setting file="file://$PROJECT_DIR$/../../../../Program Files/Microsoft Visual Studio/2022/Community/VC/Tools/MSVC/14.33.31629/include/xmemory" root0="SKIP_HIGHLIGHTING" />
-    <setting file="file://$PROJECT_DIR$/../../../../Program Files/Microsoft Visual Studio/2022/Community/VC/Tools/MSVC/14.33.31629/include/xstring" root0="SKIP_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/../../../../vcpkg/installed/x64-windows/include/boost/serialization/access.hpp" root0="SKIP_HIGHLIGHTING" />
   </component>
   <component name="MarkdownSettingsMigration">

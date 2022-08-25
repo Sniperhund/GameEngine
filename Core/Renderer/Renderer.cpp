@@ -160,17 +160,18 @@ void GameEngine_Core::Renderer::StartGameLoop()
 
 void GameEngine_Core::Renderer::UpdateShaders()
 {
-    for (int i = 0; i < m_shaders.size(); i++)
+    for (auto& m_shader : m_shaders)
     {
-        m_shaders[i].get().Use();
+        m_shader.get().Use();
 
         glm::mat4 projection = glm::perspective(glm::radians(Renderer::GetCamera().Fov), (float)m_width / (float)m_height, 0.1f, 100.0f);
-        m_shaders[i].get().SetMat4("projection", projection);
+        m_shader.get().SetMat4("projection", projection);
         glm::mat4 view = Renderer::GetCamera().GetViewMatrix();
-        m_shaders[i].get().SetMat4("view", view);
+        m_shader.get().SetMat4("view", view);
 
-        m_shaders[i].get().SetVec3("viewPos", m_camera.Position);
-        m_shaders[i].get().SetVec3("lightPos", glm::vec3(2.0f, 2.0f, 2.0f));
+        m_shader.get().SetVec3("viewPos", m_camera.Position);
+        m_shader.get().SetVec3("lightPos[0]", glm::vec3(2.0f, 2.0f, 2.0f));
+        m_shader.get().SetVec3("lightPos[1]", glm::vec3(-2.0f, -2.0f, -2.0f));
     }
 }
 
