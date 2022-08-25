@@ -26,7 +26,7 @@ namespace GameEngine_Core
         inline static std::vector<Object> m_objects;
 
         inline static char m_modelPath[128] = "";
-        inline static char m_shaderPath[128] = "";
+        inline static std::string m_shaderPath = "";
         inline static char m_name[128] = "";
         inline static float m_pos[3] = {0, 0, 0};
     public:
@@ -57,7 +57,6 @@ namespace GameEngine_Core
             else
             {
                 strcpy_s(m_modelPath, "");
-                strcpy_s(m_shaderPath, "");
                 strcpy_s(m_name, "");
                 m_pos[0] = 0;
                 m_pos[1] = 0;
@@ -124,7 +123,9 @@ namespace GameEngine_Core
             
             ImGui::InputText("Model path", m_modelPath, IM_ARRAYSIZE(m_modelPath));
 
-            ImGui::InputText("Shader path", m_shaderPath, IM_ARRAYSIZE(m_shaderPath));
+            static int item_current = 0;
+            const char* items[] = {"Shader"};
+            ImGui::Combo("Shader", &item_current, items, IM_ARRAYSIZE(items));
             
             ImGui::InputText("Name", m_name, IM_ARRAYSIZE(m_name));
             
@@ -133,6 +134,15 @@ namespace GameEngine_Core
             ImGui::Spacing();
             if (ImGui::Button("Submit"))
             {
+                switch (item_current)
+                {
+                case 0:
+                    m_shaderPath = "Shader";
+                    break;
+                default:
+                    m_shaderPath = "Shader";
+                    break;
+                }
                 Renderer::m_drawObjects = false;
                 m_objects[working_object].Init(std::format("Assets/{}", m_modelPath),
                     std::format("Shader/{}", m_shaderPath), m_name, m_pos[0], m_pos[1], m_pos[2]);
@@ -141,7 +151,6 @@ namespace GameEngine_Core
                 Renderer::m_drawObjects = true;
                 working_object++;
                 strcpy_s(m_modelPath, "");
-                strcpy_s(m_shaderPath, "");
                 strcpy_s(m_name, "");
                 m_pos[0] = 0;
                 m_pos[1] = 0;

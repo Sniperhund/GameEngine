@@ -1,7 +1,8 @@
 ﻿#include "Object.h"
 
+// OBJECT
 void GameEngine_Core::Object::_Init(std::string modelPath, std::string vertexShaderPath, std::string fragmentShaderPath,
-    float x, float y, float z)
+                                    float x, float y, float z)
 {
     m_model.Init(modelPath);
     m_shader.Init(vertexShaderPath.c_str(), fragmentShaderPath.c_str());
@@ -12,11 +13,6 @@ void GameEngine_Core::Object::_Init(std::string modelPath, std::string vertexSha
     objectInformation.m_modelPath = modelPath;
     objectInformation.m_fragmentShaderPath = fragmentShaderPath;
     objectInformation.m_vertexShaderPath = vertexShaderPath;
-
-    for (auto behaviour : m_behaviour)
-    {
-        behaviour.Start();
-    }
 }
 
 glm::vec3 GameEngine_Core::Object::GetPosition() const { return m_position; }
@@ -37,7 +33,6 @@ void GameEngine_Core::Object::SetName(std::string name) { m_name = name; objectI
 void GameEngine_Core::Object::SetColor(glm::vec4 color) { m_color = color; objectInformation.ConvertVec4ToFloat4(color, objectInformation.m_color); }
 void GameEngine_Core::Object::SetColor(float r, float g, float b, float a) { SetColor(glm::vec4(r, g, b, a)); }
 void GameEngine_Core::Object::SetColorRGB(float r, float g, float b, float a) { SetColor(glm::vec4(r/255, g/255, b/255, a/255)); }
-void GameEngine_Core::Object::AddBehaviour(const Behaviour behaviour) { m_behaviour.push_back(behaviour); }
 
 void GameEngine_Core::Object::Init(std::string modelPath, std::string shaderPath, std::string name, glm::vec3 pos)
 {
@@ -73,10 +68,5 @@ void GameEngine_Core::Object::Draw()
     m_shader.SetMat4("model", model);
     m_shader.SetVec4("custom_color", m_color);
     m_model.Draw(m_shader);
-
-    for (auto behaviour : m_behaviour)
-    {
-        behaviour.Update();
-    }
 }
 

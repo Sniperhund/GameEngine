@@ -7,7 +7,6 @@
 #include <boost/serialization/serialization.hpp>
 
 #include "../Model/Model.h"
-#include "../Object/Behaviour.h"
 
 namespace GameEngine_Core
 {
@@ -23,8 +22,6 @@ namespace GameEngine_Core
         std::string m_vertexShaderPath;
         std::string m_fragmentShaderPath;
         std::string m_name;
-
-        std::vector<Behaviour> m_behaviours;
 
         bool m_active;
 
@@ -46,7 +43,7 @@ namespace GameEngine_Core
         friend class boost::serialization::access;
         template <class Archive>
         void serialize(Archive &ar, const unsigned int version) {
-            ar &m_position &m_position &m_scale &m_rotation &m_color &m_modelPath &m_vertexShaderPath &m_fragmentShaderPath &m_active &m_name &m_behaviours;  // Simply serialize the data members
+            ar &m_position &m_position &m_scale &m_rotation &m_color &m_modelPath &m_vertexShaderPath &m_fragmentShaderPath &m_active &m_name;  // Simply serialize the data members
         }
     };
     
@@ -65,8 +62,6 @@ namespace GameEngine_Core
         bool m_active = true;
 
         std::string m_name = "";
-
-        std::vector<Behaviour> m_behaviour;
         
         void _Init(std::string modelPath, std::string vertexShaderPath, std::string fragmentShaderPath, float x, float y, float z);
     public:
@@ -90,7 +85,6 @@ namespace GameEngine_Core
         void SetColor(glm::vec4 color);
         void SetColor(float r, float g, float b, float a);
         void SetColorRGB(float r, float g, float b, float a);
-        void AddBehaviour(const Behaviour behaviour);
 
         void Init(std::string modelPath, std::string shaderPath, std::string name, glm::vec3 pos);
         void Init(std::string modelPath, std::string shaderPath, std::string name, float x, float y, float z);

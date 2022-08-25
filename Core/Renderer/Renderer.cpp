@@ -168,6 +168,9 @@ void GameEngine_Core::Renderer::UpdateShaders()
         m_shaders[i].get().SetMat4("projection", projection);
         glm::mat4 view = Renderer::GetCamera().GetViewMatrix();
         m_shaders[i].get().SetMat4("view", view);
+
+        m_shaders[i].get().SetVec3("viewPos", m_camera.Position);
+        m_shaders[i].get().SetVec3("lightPos", glm::vec3(2.0f, 2.0f, 2.0f));
     }
 }
 

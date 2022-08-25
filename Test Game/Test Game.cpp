@@ -1,5 +1,4 @@
 #include "Engine.h"
-#include "Test.h"
 
 using namespace GameEngine_Core;
 
@@ -19,12 +18,6 @@ int main(int argc, char* argv[])
     
     glfwSetCursorPosCallback(Renderer::GetGLFWWindow(), Renderer::MouseCallback);
     glfwSetKeyCallback(Renderer::GetGLFWWindow(), InputCallback);
-
-    Object box;
-    box.Init("Assets/Test.fbx", "Shader/Shader", "Something", 0, 0, 0);
-    Test test;
-    box.AddBehaviour(test);
-    ObjectsHandler::AddObject(box);
 
     Renderer::StartGameLoop();
 }

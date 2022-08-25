@@ -158,7 +158,6 @@
   <ItemGroup>
     <ClCompile Include="Classes\Shader.cpp" />
     <ClCompile Include="Model\ObjectsHandler.cpp" />
-    <ClCompile Include="Object\Behaviour.cpp" />
     <ClCompile Include="Object\Object.cpp" />
     <ClCompile Include="Renderer\Renderer.cpp" />
   </ItemGroup>
@@ -170,7 +169,6 @@
     <ClInclude Include="Model\Mesh.h" />
     <ClInclude Include="Model\Model.h" />
     <ClInclude Include="Model\ObjectsHandler.h" />
-    <ClInclude Include="Object\Behaviour.h" />
     <ClInclude Include="Object\Object.h" />
     <ClInclude Include="Renderer\Renderer.h" />
     <ClInclude Include="UI\ImGuiHandler.h" />
