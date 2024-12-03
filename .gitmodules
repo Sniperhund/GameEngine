@@ -1,0 +1,6 @@
+[submodule "Core/Libs/bgfx.cmake"]
+	path = Core/Libs/bgfx.cmake
+	url = https://github.com/bkaradzic/bgfx.cmake.git
+[submodule "Core/Libs/glfw"]
+	path = Core/Libs/glfw
+	url = https://github.com/glfw/glfw.git
