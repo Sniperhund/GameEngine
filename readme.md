@@ -13,11 +13,12 @@ If you have any issues with building, please let me know.
 
 ### Build (Windows)
 
-For now you have to manually symlink Core to the Libs file in Editor/Runtime <br>
-After you've done that you need to run:
+You need to run:
 
 -   `cmake -B build -S .`
 -   `cmake --build build`
+
+After that you should have a `Editor` folder and `Runtime` folder in the `build` folder. <br>
 
 This is gonna be updated to use a script for building in the future.
 
@@ -27,5 +28,8 @@ This is untested on Linux but should work. <br>
 
 You need to run:
 
--   `./Setup.sh`
 -   `./Build.sh <Editor|Runtime>`
+
+### Build (CLion)
+
+For easier development, you can use CLion instead of the Build script
