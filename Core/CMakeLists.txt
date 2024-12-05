@@ -35,3 +35,7 @@ target_include_directories(Core PUBLIC
 )
 
 target_include_directories(Core PUBLIC ${CMAKE_CURRENT_SOURCE_DIR}/src)
+
+# ImGui
+add_subdirectory(Libs/imgui.cmake)
+target_link_libraries(Core PRIVATE imgui.cmake)

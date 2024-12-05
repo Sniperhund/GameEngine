@@ -4,7 +4,7 @@
 
 #include "Engine.h"
 
-Engine::Engine(int width, int height, Project &project) : renderer(width, height, project.name), project(project) {}
+Engine::Engine(int width, int height, Project &project) : renderer(width, height, project.name), project(project) { }
 
 void Engine::Run() {
 	while (!glfwWindowShouldClose(renderer.getWindow())) {

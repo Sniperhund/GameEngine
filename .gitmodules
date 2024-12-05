@@ -4,3 +4,6 @@
 [submodule "Core/Libs/glfw"]
 	path = Core/Libs/glfw
 	url = https://github.com/glfw/glfw.git
+[submodule "Core/Libs/imgui.cmake"]
+	path = Core/Libs/imgui.cmake
+	url = https://github.com/pr0g/imgui.cmake.git
