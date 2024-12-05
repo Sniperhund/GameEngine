@@ -44,6 +44,7 @@ target_include_directories(Core PUBLIC
 )
 
 target_include_directories(Core PUBLIC ${CMAKE_CURRENT_SOURCE_DIR}/src)
+target_include_directories(Core PUBLIC ${CMAKE_CURRENT_SOURCE_DIR}/Libs/bgfx.cmake/bx/include/compat/mingw)
 
 # ImGui
 add_subdirectory(Libs/imgui.cmake)
