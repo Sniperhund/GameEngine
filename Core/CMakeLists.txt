@@ -2,17 +2,22 @@ cmake_minimum_required(VERSION 3.27)
 project(Core)
 set(CMAKE_CXX_STANDARD 23)
 
-file(GLOB_RECURSE SOURCE_FILES "src/*.h" "src/*.cpp")
+set(SOURCE_FILES
+        src/Graphics/Renderer.h
+        src/Graphics/Renderer.cpp
+        src/Engine.h
+        src/Engine.cpp
+        src/Project.h
+        src/Scene/Scene.cpp
+        src/Scene/Scene.h
+)
 
 add_library(Core STATIC ${SOURCE_FILES})
 
 # GLFW
 add_subdirectory(Libs/glfw)
 target_link_libraries(Core PRIVATE glfw)
-
-# OpenGL
-find_package(OpenGL REQUIRED)
-target_link_libraries(Core PRIVATE OpenGL::GL)
+target_include_directories(Core PUBLIC ${CMAKE_CURRENT_SOURCE_DIR}/Libs/glfw/include)
 
 # BGFX
 
