@@ -2,6 +2,15 @@ cmake_minimum_required(VERSION 3.27)
 project(Core)
 set(CMAKE_CXX_STANDARD 23)
 
+set(IMGUI_FILES
+        src/imgui/fs_ocornut_imgui.bin.h
+        src/imgui/vs_ocornut_imgui.bin.h
+        src/imgui/imgui_impl_bgfx.h
+        src/imgui/imgui_impl_bgfx.cpp
+        Libs/imgui.cmake/imgui/backends/imgui_impl_glfw.cpp
+        Libs/imgui.cmake/imgui/backends/imgui_impl_glfw.h
+)
+
 set(SOURCE_FILES
         src/Graphics/Renderer.h
         src/Graphics/Renderer.cpp
@@ -12,7 +21,7 @@ set(SOURCE_FILES
         src/Scene/Scene.h
 )
 
-add_library(Core STATIC ${SOURCE_FILES})
+add_library(Core STATIC ${SOURCE_FILES} ${IMGUI_FILES})
 
 # GLFW
 add_subdirectory(Libs/glfw)

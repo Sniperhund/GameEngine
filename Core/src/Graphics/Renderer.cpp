@@ -19,6 +19,10 @@
 #endif // BX_PLATFORM_
 #include <GLFW/glfw3native.h>
 
+#include "imgui/imgui_impl_bgfx.h"
+#include <imgui.h>
+#include <backends/imgui_impl_glfw.h>
+
 Renderer::Renderer(int width, int height, std::string title) {
 	if (!glfwInit()) {
 		std::cerr << "Failed to initialize GLFW" << std::endl;
@@ -46,7 +50,7 @@ Renderer::Renderer(int width, int height, std::string title) {
 
 	init.resolution.width = width;
 	init.resolution.height = height;
-	init.resolution.reset = BGFX_RESET_VSYNC;
+	//init.resolution.reset = BGFX_RESET_VSYNC;
 
 	if (!bgfx::init(init)) {
 		std::cerr << "Failed to initialize bgfx" << std::endl;
@@ -55,9 +59,26 @@ Renderer::Renderer(int width, int height, std::string title) {
 		exit(EXIT_FAILURE);
 	}
 
-	bgfx::setDebug(BGFX_DEBUG_TEXT);
+	bgfx::setDebug(BGFX_DEBUG_STATS);
 
 	bgfx::setViewClear(0, BGFX_CLEAR_COLOR | BGFX_CLEAR_DEPTH, 0x303030ff, 1.0f, 0);
+
+	IMGUI_CHECKVERSION();
+	ImGui::CreateContext();
+	ImGuiIO& io = ImGui::GetIO(); (void)io;
+
+	ImGui::StyleColorsDark();
+
+	ImGui_Implbgfx_Init(0);
+
+	switch (bgfx::getRendererType()) {
+		case bgfx::RendererType::OpenGL:
+			ImGui_ImplGlfw_InitForOpenGL(m_window, true);
+		case bgfx::RendererType::Vulkan:
+			ImGui_ImplGlfw_InitForOther(m_window, true);
+		default:
+			ImGui_ImplGlfw_InitForOther(m_window, true);
+	}
 }
 
 Renderer::~Renderer() {
@@ -66,12 +87,21 @@ Renderer::~Renderer() {
 void Renderer::Frame() {
 	bgfx::touch(0);
 
+	glfwPollEvents();
+
 	bgfx::dbgTextClear();
 	bgfx::dbgTextPrintf(0, 0, 0x0f, "Hello, World!");
 
-	bgfx::frame();
+	ImGui_Implbgfx_NewFrame();
+	ImGui_ImplGlfw_NewFrame();
+	ImGui::NewFrame();
 
-	glfwPollEvents();
+	ImGui::ShowDemoWindow();
+
+	ImGui::Render();
+	ImGui_Implbgfx_RenderDrawLists(ImGui::GetDrawData());
+
+	bgfx::frame();
 }
 
 GLFWwindow* Renderer::getWindow() {
