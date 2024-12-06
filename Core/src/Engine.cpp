@@ -8,6 +8,8 @@ Engine::Engine(int width, int height, Project &project) : renderer(width, height
 
 void Engine::Run() {
 	while (!glfwWindowShouldClose(renderer.getWindow())) {
-		renderer.Frame();
+		glfwPollEvents();
+
+		renderer.PushFrame(Scene());
 	}
 }

@@ -19,6 +19,7 @@
 class Scene {
 public:
 	Scene(std::string fileName);
+	Scene();
 	~Scene();
 
 	void Update(float deltaTime);

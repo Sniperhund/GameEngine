@@ -7,3 +7,9 @@
 Scene::Scene(std::string fileName) : m_fileName(fileName) {
 	// Load the file
 }
+
+Scene::Scene() {
+}
+
+Scene::~Scene() {
+}
