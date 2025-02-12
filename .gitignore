@@ -7,3 +7,4 @@ cmake-build-release
 .idea
 .vscode
 Core/Libs/
+**/.DS_Store
